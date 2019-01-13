@@ -7,12 +7,23 @@ const RecipeList = ({ recipes, onClick }) => {
     }
 }
 
+const List = styled.ul`
+  width: 400px;
+  height: 95vh;
+  padding: 20px;
+  margin-top: 0;
+  background: ${props => props.theme.primaryLight};
+  color: ${props => props.theme.textColor};
+  flex-grow: 1;
+  overflow-y: scroll;
+`;
 const StyledRecipeListItem = styled.li`
   font-size: 20px;
   list-style: none;
   padding: 5px;
-  white-space: nowrap;
-`
+  border-bottom: 1px solid ${props => props.theme.textColor};
+  max-height: 100vh;
+`;
 
 const RecipeNavigator = (props) => {
     return (
@@ -22,10 +33,7 @@ const RecipeNavigator = (props) => {
     )
 }
 
-const List = styled.ul`
-  width: auto;
-  margin: 10px;
-`
+
 
 
 
